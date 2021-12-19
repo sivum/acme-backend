@@ -23,7 +23,7 @@ namespace api.Handlers
                                 request.FirstName,
                                 request.LastName,
                                 request.BirthDate,
-                                request.EmployedDate,
+                                request.EmploymentDate,
                                 request.TerminationDate);
 
             return new GetEmployeeResponse()

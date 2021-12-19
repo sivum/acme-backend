@@ -10,7 +10,7 @@ namespace api.Handlers.Commands
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
-        public DateTime EmployedDate { get; set; }
+        public DateTime EmploymentDate { get; set; }
 
     }
 }

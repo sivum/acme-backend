@@ -21,7 +21,7 @@ namespace api.Handlers
                                 request.FirstName,
                                 request.LastName,
                                 request.BirthDate,
-                                request.EmployedDate);
+                                request.EmploymentDate);
             return new GetEmployeeResponse()
             {
                 Employee = employee

@@ -71,7 +71,8 @@ namespace api.Services
                     LastName = model.Person.LastName,
                     BirthDate = model.Person.BirthDate,
                     EmployeeNum = model.EmployeeNum,
-                    TerminationDate = model.Terminated
+                    TerminationDate = model.Terminated,
+                    EmploymentDate = model.EmployedDate
                 }; 
             }
             catch (Exception ex)

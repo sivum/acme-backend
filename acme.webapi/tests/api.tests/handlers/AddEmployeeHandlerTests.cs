@@ -35,7 +35,7 @@ namespace api.tests.handlers
                                 request.FirstName,
                                 request.LastName,
                                 request.BirthDate,
-                                request.EmployedDate), Times.Once);
+                                request.EmploymentDate), Times.Once);
         }
 
         [Fact]
