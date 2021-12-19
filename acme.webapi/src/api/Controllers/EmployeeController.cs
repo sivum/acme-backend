@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using api.Handlers.Commands;
 using api.Handlers.Queries;
 using MediatR;
@@ -22,7 +23,7 @@ namespace api.Controllers
         public async Task<IActionResult> Add([FromBody] AddEmployeeCommand command)
         {
             var response = await _bus.Send(command);
-            return Ok(response);
+            return Created($"/api/employee/employee/{response.Employee.EmployeeId}",response);
         }
 
       

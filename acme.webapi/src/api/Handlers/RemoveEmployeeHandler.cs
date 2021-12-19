@@ -2,6 +2,7 @@
 using api.Handlers.Responses;
 using api.Services;
 using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,7 +14,7 @@ namespace api.Handlers
         private readonly IEmployeeService _employeeService;
         public RemoveEmployeeHandler(IEmployeeService employeeService)
         {
-            _employeeService = employeeService;
+            _employeeService = employeeService ?? throw new ArgumentNullException(nameof(employeeService));
         }
         public async Task<GetEmployeesResponse> Handle(RemoveEmployeeCommand request, CancellationToken cancellationToken)
         {
